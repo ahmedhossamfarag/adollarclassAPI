@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_31_091020) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_31_102336) do
   create_table "users", force: :cascade do |t|
     t.string "nickname"
     t.string "experience"
@@ -18,7 +18,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_31_091020) do
     t.integer "role"
     t.string "specialty"
     t.string "qualifications"
-    t.string "password"
+    t.string "password_digest"
     t.string "portfolio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

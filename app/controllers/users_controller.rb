@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     if @user.save
       render json: @user, status: :created
     else
-      render json: @user.errors, status: :unprocessable_entity
+      render json: @user.errors, status: :unprocessable_content
     end
   end
 
@@ -29,6 +29,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.expect(user: [ :nickname, :experience, :email, :role, :specialty, :qualifications, :password, :portfolio ])
+      params.expect(user: [ :nickname, :experience, :email, :role, :specialty, :qualifications, :password, :password_confirmation, :portfolio ])
     end
 end
