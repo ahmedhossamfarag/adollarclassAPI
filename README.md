@@ -64,7 +64,6 @@
 ```json
 {
     "application": {
-        "user_id": 2,
         "status": "accepted"
     }
 }

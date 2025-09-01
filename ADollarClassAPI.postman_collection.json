@@ -107,7 +107,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"application\": {\n        \"user_id\": 2,\n        \"status\": \"accepted\"\n    }\n}",
+					"raw": "{\n    \"application\": {\n        \"status\": \"accepted\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
