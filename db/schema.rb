@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_31_102336) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_01_064522) do
+  create_table "applications", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_applications_on_user_id"
+  end
+
+# Could not dump table "sqlite_stat1" because of following StandardError
+#   Unknown type '' for column 'tbl'
+
+
+# Could not dump table "sqlite_stat4" because of following StandardError
+#   Unknown type '' for column 'tbl'
+
+
   create_table "users", force: :cascade do |t|
     t.string "nickname"
     t.string "experience"
@@ -23,4 +39,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_31_102336) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "applications", "users"
 end
