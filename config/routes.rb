@@ -14,4 +14,6 @@ Rails.application.routes.draw do
     get "mentors" => "users#mentors"
     get "counselors" => "users#counselors"
   end
+
+  post "auth/signin" => "auth#signin"
 end
